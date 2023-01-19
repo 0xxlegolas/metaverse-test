@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Klaytn Metaverse',
+  tagline: 'Lets Build The Metaverse Together',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'toniya-klaytn', // Usually your GitHub org/user name.
+  projectName: 'metaverse-test', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -34,17 +34,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/klaytn/klaytn',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/klaytn/klaytn',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -56,23 +52,42 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/klaytn.png',
+      // algolia: {
+      //   appId: 'YOUR_APP_ID',
+      //   apiKey: 'YOUR_SEARCH_API_KEY',
+      //   indexName: 'YOUR_INDEX_NAME',
+      //   contextualSearch: true,
+      // },
       navbar: {
-        title: 'My Site',
+        title: 'Metaverse Docs',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Klaytn Logo',
+          src: 'img/klaytn.png',
+          target: '_self',
+          width: 32,
+          height: 42,
+          className: 'custom-navbar-logo-class',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            type: 'search',
+            position: 'left',
+          },
+          // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: 'https://github.com/klaytn/klaytn',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
@@ -84,7 +99,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Metaverse',
                 to: '/docs/intro',
               },
             ],
@@ -93,34 +108,20 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Forum',
+                href: 'https://forum.klaytn.foundation/',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.io/KlaytnOfficial',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://twitter.com/klaytn_official',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
